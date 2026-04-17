@@ -1,10 +1,15 @@
-import React from 'react'
 
 const AboutUs = () => {
   return (
+    <>
     <div>
-      
+        <h1>Lorem ipsum dolor sit amet.</h1>
     </div>
+     <div>
+        
+    </div>
+    </>
+   
   )
 }
 
