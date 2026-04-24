@@ -1,12 +1,16 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Navbar from './content/Navbar'
 import LandingPage from './pages/LandingPage'
-import AboutUs from './pages/AboutUs.Jsx'
-import ContactUs from './pages/ContactUs'
+import AboutPage from './pages/AboutUs'         
 import Login from './pages/Login'
 import Signup from './pages/Signup'
-import Feed from './pages/Feed'
+import Navbar from './content/Navbar'
+import Product from './pages/Product'
+import WhyUs from './pages/WhyUs'
+import OurManufacturing from './pages/OurManufacturing'
+import OurServices from './pages/OurServices'
+import ContactUs from './pages/ContactUs'
+ 
 
 const App = () => {
   return (
@@ -14,11 +18,12 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<LandingPage />} />
-        <Route path='/about-us' element={<AboutUs />} />
-        <Route path='/contact-us' element={<ContactUs />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/feed' element={<Feed />} />
+        <Route path='/about-us' element={<AboutPage />} /> 
+        <Route path='/products' element={<Product />} />
+        <Route path='/manufacture' element={<OurManufacturing/>}/>
+        <Route path='/service' element={<OurServices/>}/>
+        <Route path='/why-us' element={<WhyUs/>}/>
+        <Route path='/contact-us' element={<ContactUs/>}/>
       </Routes>
     </BrowserRouter>
   )
